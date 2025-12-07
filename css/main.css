@@ -1,0 +1,35 @@
+/* css/main.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Nunito:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #f1c40f;
+  --dark-blue: #1a2a3a;
+  --darker: #0d1b2a;
+  --white: #f8f9fa;
+  --gray: #adb5bd;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--darker);
+  color: var(--white);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+#page-content {
+  flex: 1;
+  padding: 2rem 1rem;
+}

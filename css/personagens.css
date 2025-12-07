@@ -1,0 +1,94 @@
+/* css/personagens.css */
+.characters-grid, .confidants-grid {
+  display: grid;
+  /* 2 colunas em celulares, até 5 em telas grandes */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+
+.character-card, .confidant-card {
+  background: #1a2a3a;
+  border: 2px solid #34495e;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 180px;
+}
+
+/* Efeito ao passar o mouse (ou tocar) */
+.character-card:hover, .confidant-card:hover {
+  transform: translateY(-6px);
+  border-color: #f1c40f;
+  box-shadow: 0 6px 16px rgba(241, 196, 15, 0.25);
+}
+
+/* Imagem circular */
+.character-image, .confidant-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #34495e;
+  margin-bottom: 0.8rem;
+}
+
+/* Textos */
+.character-card h3, .confidant-card h3 {
+  color: #f1c40f;
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.character-card p, .confidant-card p {
+  font-size: 0.85rem;
+  color: #adb5bd;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Ajustes para telas muito pequenas (ex: iPhone SE) */
+@media (max-width: 380px) {
+  .characters-grid, .confidants-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 0.8rem;
+  }
+
+  .character-card, .confidant-card {
+    min-height: 170px;
+    padding: 0.9rem;
+  }
+
+  .character-image, .confidant-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .character-card h3, .confidant-card h3 {
+    font-size: 0.95rem;
+  }
+}
+
+/* Em tablets pequenos */
+@media (min-width: 481px) and (max-width: 768px) {
+  .characters-grid, .confidants-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Em desktops */
+@media (min-width: 769px) {
+  .characters-grid, .confidants-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    max-width: 900px;
+    margin: 1.5rem auto 0;
+  }
+}

@@ -1,0 +1,10 @@
+/* css/footer.css */
+.p4g-footer {
+  background: var(--dark-blue);
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 3rem;
+  color: var(--gray);
+  font-size: 0.9rem;
+  border-top: 1px solid #34495e;
+}
